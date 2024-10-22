@@ -1,5 +1,5 @@
 :root {
-  --primary: #3a3a3a;
+  --primary: #ff5a5f;
   --secondary: #111213;
   --surface: #111213;
   --onSurface: #111213;
@@ -17,6 +17,8 @@
   --text: #202223;
   --formFieldBorder: #c9cccf;
   --formFieldBorderShadow: #aeb4b9;
+
+  --font-family: 'Poppins', sans-serif; /* إضافة خط Poppins */
 }
 
 $font-size-sm: 1.4rem;
@@ -37,6 +39,7 @@ $h6-font-size: $font-size-base;
 
 html {
   font-size: 62.5%;
+  font-family: var(--font-family); /* تطبيق الخط */
 
   input[type='email'],
   input[type='password'],
@@ -55,15 +58,19 @@ html {
 }
 body {
   color: #3a3a3a;
+  font-family: var(--font-family); /* تطبيق الخط */
 }
 p {
   margin-bottom: 1rem;
 }
+
 @media screen and (max-width: 767px) {
   $font-size-base: $font-size-sm;
   body {
     font-size: $font-size-base;
     line-height: $line-height-sm;
+    font-family: var(--font-family); /* تطبيق الخط */
+
     .h1,
     h1 {
       font-size: $h1-font-size;
@@ -103,6 +110,8 @@ p {
   body {
     font-size: $font-size-base;
     line-height: $line-height-md;
+    font-family: var(--font-family); /* تطبيق الخط */
+
     .h1,
     h1 {
       font-size: $h1-font-size;
@@ -142,6 +151,8 @@ p {
   body {
     font-size: $font-size-base;
     line-height: $line-height-lg;
+    font-family: var(--font-family); /* تطبيق الخط */
+
     .h1,
     h1 {
       font-size: $h1-font-size;
@@ -168,6 +179,7 @@ p {
     }
   }
 }
+
 h1,
 h2,
 h3,
@@ -175,10 +187,13 @@ h4,
 h5,
 h6 {
   font-weight: 600;
+  font-family: var(--font-family); /* تطبيق الخط */
 }
+
 .wrapper .content {
   min-height: calc(100vh - 50px);
 }
+
 .header {
   padding: 2.5rem;
   border-bottom: 1px solid #ebebeb;
@@ -216,6 +231,7 @@ h6 {
     font-size: 13px;
   }
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -256,6 +272,7 @@ button.outline {
     }
   }
 }
+
 html .prose {
   font-size: 100%;
 }
